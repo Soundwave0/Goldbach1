@@ -33,9 +33,9 @@ index = int(input("what indexing would you like"))
 
 
 
-
-#to print graph with count and dif
 '''
+#to print graph with count and dif
+
 x = np.array([])
 y = np.array([])
 while count<=limint:
@@ -45,27 +45,29 @@ while count<=limint:
     arr = [lower,upper]
     #print(arr,end=' ')
     #print(upper-lower,end = ' ')
-    #print(count)
+    print(count)
     x = np.append(x,count)
     y = np.append(y,upperint-lower)
-    print(x,end=' ')
-    print(y)
+    #print(x,end=' ')
+    #print(y)
     count+=index
 
+print(y)
 
 plt.plot(x,y)
 plt.show()
 '''
+'''
 
 #to print pair dif and count below
-'''while count<=limint:
+while count<=limint:
     upper = gbpair(count)
     upperint = int(upper)
     lower = count-upperint
     arr = [lower,upper]
     print(arr,end=' ')
     print(upper-lower,end = ' ')
-    print(count)'''
+    print(count)
 x = np.array([])
 y = np.array([])
 numofz =0
@@ -86,7 +88,35 @@ print(np.shape(x))
 plt.scatter(x,y)
 plt.show()
 
+'''
 
+x = np.array([])
+y = np.array([])
+while count<=limint:
+    if count ==4: prev =0
+
+    upper = gbpair(count)
+    upperint = int(upper)
+    lower = count-upperint
+    #arr = [lower,upper]
+    #print(arr,end=' ')
+    #print(upper-lower,end = ' ')
+    #print(count)
+    dif = upperint - lower
+    cum = dif - prev
+    x = np.append(x,count)
+
+    y = np.append(y,dif)
+    #print(x,end=' ')
+    #print(y)
+    if count != 4:
+        prev = dif
+    count+=index
+
+print(y)
+
+plt.plot(x,y)
+plt.show()
 
 
 
