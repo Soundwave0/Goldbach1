@@ -1,11 +1,6 @@
-
 #Goldbach difference pair is printed and graphed, Used for my new take on solving the goldbach conjecture
-
-
 import numpy as np
 import matplotlib.pyplot as plt
-
-
 def isprime(n):
     if n > 1:
         for i in range(2, n):
@@ -14,8 +9,6 @@ def isprime(n):
         return True
     else:
         return False
-
-
 def gbpair(b):
 
     bi = int(b)
@@ -24,8 +17,6 @@ def gbpair(b):
         if isprime(i):
             j = bi-i
             if isprime(j):return j
-
-
 lim= input("till what to list:" )
 limint =int(lim)
 count = int(input("What count start at "))
@@ -33,7 +24,7 @@ index = int(input("what indexing would you like"))
 
 
 
-'''
+
 #to print graph with count and dif
 
 x = np.array([])
@@ -56,7 +47,6 @@ print(y)
 
 plt.plot(x,y)
 plt.show()
-'''
 '''
 
 #to print pair dif and count below
